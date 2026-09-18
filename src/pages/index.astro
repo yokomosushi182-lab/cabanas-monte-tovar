@@ -31,13 +31,6 @@ const includes = [
   },
 ];
 
-const neighbors = [
-  { key: "oveja" as const, name: "Las ovejitas", text: "Pastan en la subida, sin apuro por nadie." },
-  { key: "perezoso" as const, name: "Los perezosos", text: "Se dejan ver de vez en cuando, muy despacio." },
-  { key: "sapito" as const, name: "Los sapitos", text: "Cantan apenas cae la tarde en la montaña." },
-  { key: "pajaro" as const, name: "Los pájaros", text: "Despiertan antes que el café esté listo." },
-];
-
 const reviews = [
   {
     quote:
@@ -134,36 +127,29 @@ const reviews = [
     </div>
   </section>
 
-  <!-- Vecinos de Monte Tovar -->
+  <!-- Jardín y laguna -->
   <section class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
-    <div class="max-w-lg">
-      <p class="eyebrow">Fauna local</p>
-      <h2 class="mt-3 font-display text-3xl font-semibold sm:text-4xl">Vecinos de Monte Tovar</h2>
-      <p class="mt-4 font-body text-tinta/75">
-        No estás solo en la montaña. Estos son los que ya vivían aquí antes que nosotros.
-      </p>
-    </div>
-
-    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      {
-        neighbors.map((n) => (
-          <figure class="group overflow-hidden rounded-[var(--radius-cabin)] bg-oliva/5">
-            <div class="aspect-[4/5] overflow-hidden">
-              <Image
-                src={IMG[n.key]}
-                alt={n.name}
-                width={480}
-                height={600}
-                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <figcaption class="p-4">
-              <p class="font-display text-lg font-semibold text-oliva-dark">{n.name}</p>
-              <p class="mt-1 text-sm text-tinta/65">{n.text}</p>
-            </figcaption>
-          </figure>
-        ))
-      }
+    <div class="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+      <div class="overflow-hidden rounded-[var(--radius-cabin-lg)] md:order-2">
+        <Image
+          src={IMG.laguna}
+          alt="Laguna y jardín de piedra de Monte Tovar, rodeados de árboles"
+          width={900}
+          height={1100}
+          class="h-full w-full object-cover"
+        />
+      </div>
+      <div class="md:order-1">
+        <p class="eyebrow">Jardín y laguna</p>
+        <h2 class="mt-3 font-display text-3xl font-semibold sm:text-4xl">
+          Silencio, pájaros y aire de montaña
+        </h2>
+        <p class="mt-4 max-w-sm font-body text-tinta/75">
+          Rodeados de naturaleza, a 6 minutos de la plaza. Entre sapitos que cantan al caer la
+          tarde, lagartijas tomando sol en las piedras y las bromelias que crecen solas en el
+          jardín — Monte Tovar no se comparte con nadie más.
+        </p>
+      </div>
     </div>
   </section>
 

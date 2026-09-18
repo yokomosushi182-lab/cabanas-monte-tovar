@@ -1,18 +1,24 @@
 ---
+import { Image } from "astro:assets";
+import { IMG } from "../data/images";
+
 export interface Props {
   variant?: "oliva" | "crema";
   class?: string;
 }
 const { variant = "oliva", class: className = "" } = Astro.props;
-const ring = variant === "crema" ? "border-crema/40" : "border-oliva/30";
 const text = variant === "crema" ? "text-crema" : "text-oliva-dark";
 const sub = variant === "crema" ? "text-crema/70" : "text-oliva/70";
 ---
 
 <a href="/" class={`group flex items-center gap-3 ${className}`} aria-label="Cabañas Monte Tovar — inicio">
-  <span class={`grid h-11 w-11 shrink-0 place-items-center rounded-full border ${ring} font-display text-lg italic ${text}`}>
-    MT
-  </span>
+  <Image
+    src={IMG.logo}
+    alt="Cabañas Monte Tovar"
+    width={44}
+    height={44}
+    class="h-11 w-11 shrink-0 rounded-full object-cover"
+  />
   <span class="leading-none">
     <span class={`eyebrow block !text-[0.65rem] ${sub}`}>Cabañas</span>
     <span class={`font-display text-xl font-semibold ${text}`}>Monte Tovar</span>

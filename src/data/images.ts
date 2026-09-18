@@ -3,14 +3,11 @@ import fachada from "../assets/img/fachada.jpg";
 import terraza from "../assets/img/terraza.jpg";
 import puerta from "../assets/img/puerta.jpg";
 import laguna from "../assets/img/laguna.jpg";
-import oveja from "../assets/img/oveja.jpg";
-import habVerde from "../assets/img/hab-verde.jpg";
-import comedor from "../assets/img/comedor.jpg";
-import bromelia from "../assets/img/bromelia.jpg";
+import matrimonial from "../assets/img/matrimonial.jpg";
+import para4 from "../assets/img/para4.jpg";
 import literas from "../assets/img/literas.jpg";
-import perezoso from "../assets/img/perezoso.jpg";
-import sapito from "../assets/img/sapito.jpg";
-import pajaro from "../assets/img/pajaro.jpg";
+import ventana from "../assets/img/ventana.jpg";
+import logo from "../assets/logo.jpg";
 
 export const IMG = {
   "chalet-arbol": chaletArbol,
@@ -18,14 +15,11 @@ export const IMG = {
   terraza,
   puerta,
   laguna,
-  oveja,
-  "hab-verde": habVerde,
-  comedor,
-  bromelia,
+  matrimonial,
+  para4,
   literas,
-  perezoso,
-  sapito,
-  pajaro,
+  ventana,
+  logo,
 } as const;
 
 export type ImgKey = keyof typeof IMG;

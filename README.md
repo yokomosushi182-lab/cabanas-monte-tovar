@@ -18,31 +18,29 @@ npm run preview
 
 Listo para desplegar en Vercel o Netlify sin configuración adicional (salida estática en `dist/`).
 
-## Fotos: reemplazar los placeholders
+## Fotos
 
-Las 13 fotos en `src/assets/img/` son **placeholders reales de stock** (Pexels, con la misma
-estética alpina/Tirolesa), no las fotos que enviaste por chat — no hay forma de guardar
-imágenes pegadas en el chat directamente a disco, así que se usaron equivalentes reales
-mientras tanto.
-
-Para poner tus fotos reales, reemplaza estos archivos (mismo nombre, cualquier resolución
-razonable ≥1200px de ancho) y vuelve a correr `npm run build`:
+Las fotos en `src/assets/img/` (y el logo en `src/assets/logo.jpg`) son reales, tomadas del
+Instagram oficial @chalets_monte_tovar (posts públicos + foto de perfil).
 
 | Archivo | Uso en el sitio |
 |---|---|
-| `chalet-arbol.jpg` | Hero de Inicio |
-| `fachada.jpg` | CTA final de Inicio, Eventos |
-| `terraza.jpg` | Foto ancha de Inicio |
-| `puerta.jpg` | Cabañita para 6 — B, Cómo llegar |
-| `laguna.jpg` | Contacto |
-| `oveja.jpg` | Vecinos (ovejitas) |
-| `hab-verde.jpg` | Cabañita Matrimonial |
-| `comedor.jpg` | Cabañita para 4 |
-| `bromelia.jpg` | Galería |
+| `chalet-arbol.jpg` | Hero de Inicio (fachada completa + jardín) |
+| `fachada.jpg` | CTA final de Inicio, Eventos (fachada de cerca) |
+| `terraza.jpg` | Foto ancha de Inicio (terraza, comedor, parrillera) |
+| `puerta.jpg` | Cómo llegar (puerta abierta hacia la terraza) |
+| `laguna.jpg` | Jardín y laguna en Inicio, Contacto |
+| `matrimonial.jpg` | Cabañita Matrimonial (cama de hierro forjado) |
+| `para4.jpg` | Cabañita para 4 (ventana con araucaria) |
+| `ventana.jpg` | Cabañita para 6 — B (ventana, araucaria y flores) |
 | `literas.jpg` | Cabañita para 6 — A |
-| `perezoso.jpg` | Vecinos (perezosos) |
-| `sapito.jpg` | Vecinos (sapitos) |
-| `pajaro.jpg` | Vecinos (pájaros) |
+| `logo.jpg` | Logo real (header, footer, favicon) |
+
+Para reemplazar cualquiera por una foto más nueva, sobreescribe el archivo (mismo nombre) y
+corre `npm run build`. La sección "Jardín y laguna" de Inicio ya no muestra fotos inventadas
+de fauna (ovejas, perezosos) — esas nunca fueron reales para esta propiedad; el texto ahora
+solo menciona sapitos/lagartijas/bromelias como ambientación, sin fotos que no podamos
+respaldar.
 
 ## Pendientes
 

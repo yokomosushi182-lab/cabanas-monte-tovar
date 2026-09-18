@@ -42,7 +42,7 @@ export const CABINS: Cabin[] = [
     beds: "1 cama matrimonial",
     capacity: "Hasta 2 personas",
     features: ["Baño privado", "Terraza con vista al monte", "Cafetera y agua caliente"],
-    image: "hab-verde",
+    image: "matrimonial",
   },
   {
     slug: "para-4",
@@ -52,7 +52,7 @@ export const CABINS: Cabin[] = [
     beds: "2 camas (una matrimonial, una doble)",
     capacity: "Hasta 4 personas",
     features: ["Baño privado", "Ropa de cama incluida", "A pasos de la parrillera"],
-    image: "comedor",
+    image: "para4",
   },
   {
     slug: "para-6-a",
@@ -72,7 +72,7 @@ export const CABINS: Cabin[] = [
     beds: "1 cama matrimonial + literas para 4",
     capacity: "Hasta 6 personas",
     features: ["Baño privado", "Literas de madera", "Pet friendly"],
-    image: "puerta",
+    image: "ventana",
   },
 ];
 
