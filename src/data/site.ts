@@ -1,6 +1,6 @@
 export const SITE = {
   name: "Cabañas Monte Tovar",
-  domain: "https://cabanasmontetovar.com",
+  domain: "https://montetovar.kentolab.com",
   whatsappNumber: "5492944157182",
   instagram: "https://www.instagram.com/chalets_monte_tovar",
   instagramHandle: "@chalets_monte_tovar",
