@@ -44,7 +44,14 @@ export const CABINS: Cabin[] = [
     slug: "amarilla",
     name: "Cabaña Amarilla",
     capacity: "De 4 a 6 personas",
-    features: ["Baño privado", "Sábanas de algodón egipcio", "Toallas Kalosh"],
+    features: [
+      "Baño privado",
+      "Chimenea",
+      "Porche independiente con comedor",
+      "Área de parrillera y jardín",
+      "Sábanas de algodón egipcio",
+      "Toallas Kalosh",
+    ],
     image: "amarilla",
   },
   {
