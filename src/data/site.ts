@@ -36,54 +36,44 @@ export type Cabin = {
 
 export const CABINS: Cabin[] = [
   {
-    slug: "matrimonial",
-    name: "Cabaña Matrimonial",
+    slug: "verde",
+    name: "Cabaña Verde",
     summary:
       "La más íntima: perfecta para una pareja que quiere niebla, café de la mañana y silencio de montaña.",
     beds: "1 cama matrimonial",
     capacity: "Hasta 2 personas",
     features: ["Baño privado", "Cafetera y agua caliente"],
-    image: "matrimonial",
+    image: "verde",
   },
   {
-    slug: "para-6-amarilla",
-    name: "Cabaña para 6 personas",
+    slug: "amarilla",
+    name: "Cabaña Amarilla",
     summary:
       "Con porche y comedor propio, cómoda para parejas o grupos de hasta seis.",
     beds: "1 cama matrimonial",
     capacity: "De 2 a 6 personas",
     features: ["Baño privado", "Porche y comedor", "Cafetera y agua caliente"],
-    image: "para6",
+    image: "amarilla",
   },
   {
-    slug: "para-4",
-    name: "Cabaña para 4",
+    slug: "azul",
+    name: "Cabaña Azul",
     summary:
-      "Para familias chicas o dos parejas de amigos. Suficiente espacio para desempacar sin pisarse.",
-    beds: "2 camas (una matrimonial, una doble)",
+      "Dos habitaciones conectadas, ideal para familias chicas o dos parejas de amigos.",
+    beds: "2 camas",
     capacity: "Hasta 4 personas",
-    features: ["Baño privado", "Ropa de cama incluida", "A pasos de la parrillera"],
-    image: "para4",
+    features: ["Baño privado", "Ropa de cama incluida"],
+    image: "azul",
   },
   {
-    slug: "para-6-a",
-    name: "Cabaña para 6 — A",
+    slug: "roja",
+    name: "Cabaña Roja",
     summary:
       "Con literas para los más chicos y una cama grande para los papás. La preferida de los grupos con niños.",
     beds: "1 cama matrimonial + literas para 4",
     capacity: "Hasta 6 personas",
     features: ["Baño privado", "Literas de madera", "Pet friendly"],
-    image: "literas",
-  },
-  {
-    slug: "para-6-b",
-    name: "Cabaña para 6 — B",
-    summary:
-      "Hermana de la anterior, con la misma capacidad y su propia vista distinta del valle.",
-    beds: "1 cama matrimonial + literas para 4",
-    capacity: "Hasta 6 personas",
-    features: ["Baño privado", "Literas de madera", "Pet friendly"],
-    image: "ventana",
+    image: "roja",
   },
 ];
 

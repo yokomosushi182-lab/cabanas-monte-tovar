@@ -4,10 +4,11 @@ import terraza from "../assets/img/terraza.jpg";
 import puerta from "../assets/img/puerta.jpg";
 import laguna from "../assets/img/laguna.jpg";
 import bromelia from "../assets/img/bromelia.jpg";
-import matrimonial from "../assets/img/matrimonial.jpg";
-import para6 from "../assets/img/para6.jpg";
-import para4 from "../assets/img/para4.jpg";
-import literas from "../assets/img/literas.jpg";
+import verde from "../assets/img/verde.jpg";
+import amarilla from "../assets/img/amarilla.jpg";
+import roja from "../assets/img/roja.jpg";
+import azul from "../assets/img/azul.jpg";
+import azulDetalle from "../assets/img/azul-detalle.jpg";
 import ventana from "../assets/img/ventana.jpg";
 import oveja from "../assets/img/oveja.jpg";
 import conejo from "../assets/img/conejo.jpg";
@@ -23,10 +24,11 @@ export const IMG = {
   puerta,
   laguna,
   bromelia,
-  matrimonial,
-  para6,
-  para4,
-  literas,
+  verde,
+  amarilla,
+  roja,
+  azul,
+  "azul-detalle": azulDetalle,
   ventana,
   oveja,
   conejo,
