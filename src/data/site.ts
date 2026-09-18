@@ -8,7 +8,8 @@ export const SITE = {
   addressRegion: "Aragua",
   addressCountry: "VE",
   geo: { lat: 10.3965947, lng: -67.2794065 },
-  googleMapsUrl: "https://maps.app.goo.gl/jwabcZ1SqKQc2Ljz8",
+  googleMapsUrl:
+    "https://www.google.com/maps?q=9PWC+J6P+Caba%C3%B1a+Monte+Tovar,+1030,+Aragua,+Venezuela&ftid=0x8c2a85449ce17573:0x8d17792ff62c69ad",
 };
 
 export function waLink(message: string) {
