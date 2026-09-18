@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import { IMG } from "../data/images";
+import { SITE } from "../data/site";
 
 const routes = [
   { from: "Caracas", time: "1 h 30 min", detail: "Autopista Caracas–La Victoria, salida hacia El Junquito o La Victoria, luego la vía a la Colonia Tovar." },
@@ -45,12 +46,21 @@ const routes = [
             5 minutos de ahí, subiendo hacia la parte más alta de la Colonia.
           </p>
         </div>
+
+        <a
+          href={SITE.googleMapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline w-full sm:w-auto"
+        >
+          Abrir en Google Maps
+        </a>
       </div>
 
       <div class="overflow-hidden rounded-[var(--radius-cabin-lg)] ring-1 ring-oliva/10">
         <iframe
-          title="Mapa de la Colonia Tovar, Aragua"
-          src="https://www.google.com/maps?q=Colonia+Tovar,+Aragua,+Venezuela&output=embed"
+          title="Mapa de Cabaña Monte Tovar, Colonia Tovar"
+          src={`https://www.google.com/maps?q=${SITE.geo.lat},${SITE.geo.lng}&z=15&output=embed`}
           class="h-[420px] w-full grayscale-[10%] md:h-full"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
@@ -63,7 +73,7 @@ const routes = [
     <div class="mx-auto max-w-6xl overflow-hidden rounded-[var(--radius-cabin-lg)]">
       <Image
         src={IMG.puerta}
-        alt="Camino de entrada hacia las cabañitas en la montaña"
+        alt="Camino de entrada hacia las cabañas en la montaña"
         width={1600}
         height={800}
         class="h-[40vh] w-full object-cover md:h-[50vh]"

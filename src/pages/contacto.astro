@@ -44,13 +44,21 @@ import { SITE, waLink } from "../data/site";
           <span aria-hidden="true" class="font-display text-2xl text-terracota">→</span>
         </a>
 
-        <div class="rounded-[var(--radius-cabin)] bg-oliva/8 p-6">
-          <p class="eyebrow">Dirección</p>
-          <p class="mt-1 font-display text-xl font-semibold text-oliva-dark">
-            Colonia Tovar, Aragua, Venezuela
-          </p>
-          <p class="mt-1 text-sm text-tinta/65">A 5 minutos del Hotel Freiburg, subiendo hacia la parte más alta.</p>
-        </div>
+        <a
+          href={SITE.googleMapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-between gap-4 rounded-[var(--radius-cabin)] bg-oliva/8 p-6 transition-colors hover:bg-oliva/14"
+        >
+          <div>
+            <p class="eyebrow">Dirección</p>
+            <p class="mt-1 font-display text-xl font-semibold text-oliva-dark">
+              Colonia Tovar, Aragua, Venezuela
+            </p>
+            <p class="mt-1 text-sm text-tinta/65">A 5 minutos del Hotel Freiburg, subiendo hacia la parte más alta.</p>
+          </div>
+          <span aria-hidden="true" class="font-display text-2xl text-terracota">→</span>
+        </a>
       </div>
 
       <a href={waLink("Hola, quiero reservar en Cabañas Monte Tovar")} target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-10">

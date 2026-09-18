@@ -7,7 +7,8 @@ export const SITE = {
   addressLocality: "Colonia Tovar",
   addressRegion: "Aragua",
   addressCountry: "VE",
-  geo: { lat: 10.3966, lng: -67.2894 },
+  geo: { lat: 10.3965947, lng: -67.2794065 },
+  googleMapsUrl: "https://maps.app.goo.gl/jwabcZ1SqKQc2Ljz8",
 };
 
 export function waLink(message: string) {
@@ -16,7 +17,7 @@ export function waLink(message: string) {
 
 export const NAV = [
   { href: "/", label: "Inicio" },
-  { href: "/cabanitas/", label: "Cabañitas" },
+  { href: "/cabanas/", label: "Cabañas" },
   { href: "/galeria/", label: "Galería" },
   { href: "/como-llegar/", label: "Cómo llegar" },
   { href: "/eventos/", label: "Eventos" },
@@ -36,7 +37,7 @@ export type Cabin = {
 export const CABINS: Cabin[] = [
   {
     slug: "matrimonial",
-    name: "Cabañita Matrimonial",
+    name: "Cabaña Matrimonial",
     summary:
       "La más íntima de las cuatro: perfecta para una pareja que quiere niebla, café de la mañana y silencio de montaña.",
     beds: "1 cama matrimonial",
@@ -46,7 +47,7 @@ export const CABINS: Cabin[] = [
   },
   {
     slug: "para-4",
-    name: "Cabañita para 4",
+    name: "Cabaña para 4",
     summary:
       "Para familias chicas o dos parejas de amigos. Suficiente espacio para desempacar sin pisarse.",
     beds: "2 camas (una matrimonial, una doble)",
@@ -56,7 +57,7 @@ export const CABINS: Cabin[] = [
   },
   {
     slug: "para-6-a",
-    name: "Cabañita para 6 — A",
+    name: "Cabaña para 6 — A",
     summary:
       "Con literas para los más chicos y una cama grande para los papás. La preferida de los grupos con niños.",
     beds: "1 cama matrimonial + literas para 4",
@@ -66,7 +67,7 @@ export const CABINS: Cabin[] = [
   },
   {
     slug: "para-6-b",
-    name: "Cabañita para 6 — B",
+    name: "Cabaña para 6 — B",
     summary:
       "Hermana de la anterior, con la misma capacidad y su propia vista distinta del valle.",
     beds: "1 cama matrimonial + literas para 4",

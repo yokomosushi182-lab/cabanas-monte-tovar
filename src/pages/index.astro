@@ -6,16 +6,16 @@ import { waLink } from "../data/site";
 
 const includes = [
   {
-    label: "Cuatro cabañitas",
+    label: "Cuatro cabañas",
     text: "Cada una con baño privado, para que nadie tenga que compartir ducha con el primo.",
   },
   {
     label: "Hasta 20 personas",
-    text: "Entre las cuatro cabañitas cabe la familia completa, con espacio para respirar.",
+    text: "Entre las cuatro cabañas cabe la familia completa, con espacio para respirar.",
   },
   {
     label: "Desayuno criollo",
-    text: "Arepa, café de la montaña y lo que esté fresco esa mañana. Incluido, sin sorpresas.",
+    text: "Arepa, café de la montaña y lo que esté fresco esa mañana.",
   },
   {
     label: "Parrillera y áreas verdes",
@@ -44,7 +44,7 @@ const reviews = [
   },
   {
     quote:
-      "Las cabañitas son chiquitas por fuera pero rinden por dentro. Muy bien cuidadas, muy tranquilas.",
+      "Muy bien cuidadas, muy tranquilas. Volveríamos sin pensarlo.",
     name: "Carlos y Génesis",
   },
 ];
@@ -52,7 +52,7 @@ const reviews = [
 
 <Layout
   title="Cabañas Monte Tovar — Posada en lo más alto de la Colonia Tovar"
-  description="Cuatro cabañitas con baño privado en lo más alto de la Colonia Tovar, Aragua. Desayuno criollo, parrillera, pet friendly y a 1 hora y media de Caracas."
+  description="Cuatro cabañas con baño privado en lo más alto de la Colonia Tovar, Aragua. Desayuno criollo, parrillera, pet friendly y a 1 hora y media de Caracas."
 >
   <!-- Hero -->
   <section class="relative flex min-h-[92svh] items-end overflow-hidden">
@@ -73,15 +73,15 @@ const reviews = [
           Un refugio en lo más alto de la Colonia Tovar
         </h1>
         <p class="mt-5 max-w-md font-body text-base text-crema/85 md:text-lg">
-          Cuatro cabañitas de montaña, aire frío por las mañanas y el pueblo alemán a un paseo
+          Cuatro cabañas de montaña, aire frío por las mañanas y el pueblo alemán a un paseo
           corto cuesta abajo.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href={waLink("Hola, quiero reservar en Cabañas Monte Tovar")} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
             Reservar por WhatsApp
           </a>
-          <a href="/cabanitas/" class="btn border border-crema/40 text-crema hover:bg-crema/10">
-            Ver las cabañitas
+          <a href="/cabanas/" class="btn border border-crema/40 text-crema hover:bg-crema/10">
+            Ver las cabañas
           </a>
         </div>
       </div>
@@ -116,13 +116,13 @@ const reviews = [
 
   <!-- Foto ancha -->
   <section class="px-5 md:px-8">
-    <div class="mx-auto max-w-6xl overflow-hidden rounded-[var(--radius-cabin-lg)]">
+    <div class="mx-auto aspect-[16/10] max-w-6xl overflow-hidden rounded-[var(--radius-cabin-lg)] md:aspect-[21/9]">
       <Image
         src={IMG.terraza}
-        alt="Terraza con sombrilla y vista al valle de la Colonia Tovar"
+        alt="Terraza, comedor y parrillera cubiertos, con vista al monte"
         width={1600}
         height={900}
-        class="h-[50vh] w-full object-cover md:h-[65vh]"
+        class="h-full w-full object-cover object-[center_25%]"
       />
     </div>
   </section>
@@ -189,7 +189,7 @@ const reviews = [
         Sube a la montaña este fin de semana
       </h2>
       <p class="mx-auto mt-4 max-w-md font-body text-crema/80">
-        Cuatro cabañitas, un solo mensaje de WhatsApp. Te contamos disponibilidad al toque.
+        Cuatro cabañas, un solo mensaje de WhatsApp. Te contamos disponibilidad al toque.
       </p>
       <a
         href={waLink("Hola, quiero reservar en Cabañas Monte Tovar")}
