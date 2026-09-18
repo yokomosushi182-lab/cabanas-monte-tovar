@@ -15,6 +15,10 @@ import conejo from "../assets/img/conejo.jpg";
 import desayuno from "../assets/img/desayuno.jpg";
 import bano from "../assets/img/bano.jpg";
 import rincon from "../assets/img/rincon.jpg";
+import jardinFrontal from "../assets/img/jardin-frontal.jpg";
+import parrillera from "../assets/img/parrillera.jpg";
+import vistaPanoramica from "../assets/img/vista-panoramica.jpg";
+import mesaJardin from "../assets/img/mesa-jardin.jpg";
 import logo from "../assets/logo.jpg";
 
 export const IMG = {
@@ -35,6 +39,10 @@ export const IMG = {
   desayuno,
   bano,
   rincon,
+  "jardin-frontal": jardinFrontal,
+  parrillera,
+  "vista-panoramica": vistaPanoramica,
+  "mesa-jardin": mesaJardin,
   logo,
 } as const;
 
