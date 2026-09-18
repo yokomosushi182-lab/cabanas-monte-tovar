@@ -5,6 +5,7 @@ import puerta from "../assets/img/puerta.jpg";
 import laguna from "../assets/img/laguna.jpg";
 import bromelia from "../assets/img/bromelia.jpg";
 import matrimonial from "../assets/img/matrimonial.jpg";
+import para6 from "../assets/img/para6.jpg";
 import para4 from "../assets/img/para4.jpg";
 import literas from "../assets/img/literas.jpg";
 import ventana from "../assets/img/ventana.jpg";
@@ -23,6 +24,7 @@ export const IMG = {
   laguna,
   bromelia,
   matrimonial,
+  para6,
   para4,
   literas,
   ventana,

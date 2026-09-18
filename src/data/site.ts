@@ -36,6 +36,16 @@ export type Cabin = {
 
 export const CABINS: Cabin[] = [
   {
+    slug: "matrimonial",
+    name: "Cabaña Matrimonial",
+    summary:
+      "La más íntima: perfecta para una pareja que quiere niebla, café de la mañana y silencio de montaña.",
+    beds: "1 cama matrimonial",
+    capacity: "Hasta 2 personas",
+    features: ["Baño privado", "Cafetera y agua caliente"],
+    image: "matrimonial",
+  },
+  {
     slug: "para-6-amarilla",
     name: "Cabaña para 6 personas",
     summary:
@@ -43,7 +53,7 @@ export const CABINS: Cabin[] = [
     beds: "1 cama matrimonial",
     capacity: "De 2 a 6 personas",
     features: ["Baño privado", "Porche y comedor", "Cafetera y agua caliente"],
-    image: "matrimonial",
+    image: "para6",
   },
   {
     slug: "para-4",
