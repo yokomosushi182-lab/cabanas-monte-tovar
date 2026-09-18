@@ -130,13 +130,23 @@ const reviews = [
   <section class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
     <div class="max-w-lg">
       <p class="eyebrow">Áreas comunes</p>
-      <h2 class="mt-3 font-display text-3xl font-semibold sm:text-4xl">Parrillera y jardines</h2>
+      <h2 class="mt-3 font-display text-3xl font-semibold sm:text-4xl">
+        Parrillera, jardines y terraza de desayuno
+      </h2>
       <p class="mt-4 font-body text-tinta/75">
-        Compartidos entre las cuatro cabañas: la parrillera para hacer parrilla y los
-        jardines con vista panorámica al valle, para todos los huéspedes de Monte Tovar.
+        Compartidos entre las cuatro cabañas: la parrillera para hacer parrilla, los jardines
+        con vista panorámica al valle, y un hermoso porche con vista panorámica para disfrutar
+        tu desayuno.
       </p>
     </div>
-    <div class="mt-10 grid gap-4 sm:grid-cols-2">
+    <div class="mt-10 overflow-hidden rounded-[var(--radius-cabin-lg)]">
+      <Image
+        src={IMG["porche-desayuno"]}
+        alt="Porche con vista panorámica para disfrutar el desayuno"
+        class="h-auto w-full"
+      />
+    </div>
+    <div class="mt-4 grid gap-4 sm:grid-cols-2">
       <div class="overflow-hidden rounded-[var(--radius-cabin-lg)]">
         <Image src={IMG.parrillera} alt="Parrillera común entre los árboles, al atardecer" class="h-auto w-full" />
       </div>

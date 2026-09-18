@@ -19,6 +19,7 @@ import jardinFrontal from "../assets/img/jardin-frontal.jpg";
 import parrillera from "../assets/img/parrillera.jpg";
 import vistaPanoramica from "../assets/img/vista-panoramica.jpg";
 import mesaJardin from "../assets/img/mesa-jardin.jpg";
+import porcheDesayuno from "../assets/img/porche-desayuno.jpg";
 import logo from "../assets/logo.jpg";
 
 export const IMG = {
@@ -43,6 +44,7 @@ export const IMG = {
   parrillera,
   "vista-panoramica": vistaPanoramica,
   "mesa-jardin": mesaJardin,
+  "porche-desayuno": porcheDesayuno,
   logo,
 } as const;
 
