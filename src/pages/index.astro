@@ -1,0 +1,218 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import { IMG } from "../data/images";
+import { waLink } from "../data/site";
+
+const includes = [
+  {
+    label: "Cuatro cabañitas",
+    text: "Cada una con baño privado, para que nadie tenga que compartir ducha con el primo.",
+  },
+  {
+    label: "Hasta 20 personas",
+    text: "Entre las cuatro cabañitas cabe la familia completa, con espacio para respirar.",
+  },
+  {
+    label: "Desayuno criollo",
+    text: "Arepa, café de la montaña y lo que esté fresco esa mañana. Incluido, sin sorpresas.",
+  },
+  {
+    label: "Parrillera y áreas verdes",
+    text: "Para el asado de la tarde y las carreras de los niños antes de que oscurezca.",
+  },
+  {
+    label: "Pet friendly",
+    text: "Tu perro también se gana la niebla y el pasto. Solo avísanos que viene.",
+  },
+  {
+    label: "A 6 minutos de la plaza",
+    text: "Lo suficientemente lejos para el silencio, lo suficientemente cerca para el paseo.",
+  },
+];
+
+const neighbors = [
+  { key: "oveja" as const, name: "Las ovejitas", text: "Pastan en la subida, sin apuro por nadie." },
+  { key: "perezoso" as const, name: "Los perezosos", text: "Se dejan ver de vez en cuando, muy despacio." },
+  { key: "sapito" as const, name: "Los sapitos", text: "Cantan apenas cae la tarde en la montaña." },
+  { key: "pajaro" as const, name: "Los pájaros", text: "Despiertan antes que el café esté listo." },
+];
+
+const reviews = [
+  {
+    quote:
+      "Subimos con los tres niños y el perro y nadie quiso bajar. La niebla en la mañana se ve desde la cama.",
+    name: "Familia Rodríguez",
+  },
+  {
+    quote:
+      "El desayuno solo, ya vale la subida. Reservamos de nuevo para el Oktoberfest de este año.",
+    name: "Andrea M.",
+  },
+  {
+    quote:
+      "Las cabañitas son chiquitas por fuera pero rinden por dentro. Muy bien cuidadas, muy tranquilas.",
+    name: "Carlos y Génesis",
+  },
+];
+---
+
+<Layout
+  title="Cabañas Monte Tovar — Posada en lo más alto de la Colonia Tovar"
+  description="Cuatro cabañitas con baño privado en lo más alto de la Colonia Tovar, Aragua. Desayuno criollo, parrillera, pet friendly y a 1 hora y media de Caracas."
+>
+  <!-- Hero -->
+  <section class="relative flex min-h-[92svh] items-end overflow-hidden">
+    <Image
+      src={IMG["chalet-arbol"]}
+      alt="Cabañas de estilo alpino asomadas entre el verde de la montaña en la Colonia Tovar"
+      class="absolute inset-0 -z-10 h-full w-full object-cover"
+      width={1920}
+      height={1440}
+      priority
+    />
+    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-tinta/85 via-tinta/25 to-tinta/10"></div>
+
+    <div class="mx-auto w-full max-w-6xl px-5 pb-16 pt-32 md:px-8 md:pb-24">
+      <div class="max-w-xl">
+        <p class="eyebrow !text-madera">Colonia Tovar · Aragua</p>
+        <h1 class="mt-4 font-display text-4xl font-semibold text-crema sm:text-5xl md:text-6xl">
+          Un refugio en lo más alto de la Colonia Tovar
+        </h1>
+        <p class="mt-5 max-w-md font-body text-base text-crema/85 md:text-lg">
+          Cuatro cabañitas de montaña, aire frío por las mañanas y el pueblo alemán a un paseo
+          corto cuesta abajo.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href={waLink("Hola, quiero reservar en Cabañas Monte Tovar")} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Reservar por WhatsApp
+          </a>
+          <a href="/cabanitas/" class="btn border border-crema/40 text-crema hover:bg-crema/10">
+            Ver las cabañitas
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lo que incluye -->
+  <section class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+    <div class="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
+      <div>
+        <p class="eyebrow">Lo que incluye tu estadía</p>
+        <h2 class="mt-3 font-display text-3xl font-semibold sm:text-4xl">
+          Todo lo que necesitas, nada que sobre
+        </h2>
+        <p class="mt-4 max-w-sm font-body text-tinta/75">
+          Pensamos Monte Tovar para familias y grupos de amigos que quieren desconectar sin
+          renunciar a las comodidades básicas.
+        </p>
+      </div>
+      <dl class="grid gap-x-8 gap-y-8 sm:grid-cols-2">
+        {
+          includes.map((item) => (
+            <div class="border-t border-oliva/20 pt-4">
+              <dt class="font-display text-lg font-semibold text-oliva-dark">{item.label}</dt>
+              <dd class="mt-1.5 text-sm text-tinta/70">{item.text}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </section>
+
+  <!-- Foto ancha -->
+  <section class="px-5 md:px-8">
+    <div class="mx-auto max-w-6xl overflow-hidden rounded-[var(--radius-cabin-lg)]">
+      <Image
+        src={IMG.terraza}
+        alt="Terraza con sombrilla y vista al valle de la Colonia Tovar"
+        width={1600}
+        height={900}
+        class="h-[50vh] w-full object-cover md:h-[65vh]"
+      />
+    </div>
+  </section>
+
+  <!-- Vecinos de Monte Tovar -->
+  <section class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+    <div class="max-w-lg">
+      <p class="eyebrow">Fauna local</p>
+      <h2 class="mt-3 font-display text-3xl font-semibold sm:text-4xl">Vecinos de Monte Tovar</h2>
+      <p class="mt-4 font-body text-tinta/75">
+        No estás solo en la montaña. Estos son los que ya vivían aquí antes que nosotros.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        neighbors.map((n) => (
+          <figure class="group overflow-hidden rounded-[var(--radius-cabin)] bg-oliva/5">
+            <div class="aspect-[4/5] overflow-hidden">
+              <Image
+                src={IMG[n.key]}
+                alt={n.name}
+                width={480}
+                height={600}
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <figcaption class="p-4">
+              <p class="font-display text-lg font-semibold text-oliva-dark">{n.name}</p>
+              <p class="mt-1 text-sm text-tinta/65">{n.text}</p>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Reseñas -->
+  <section class="bg-oliva/8 py-20 md:py-28">
+    <div class="mx-auto max-w-6xl px-5 md:px-8">
+      <p class="eyebrow">Lo que dicen al bajar</p>
+      <h2 class="mt-3 max-w-md font-display text-3xl font-semibold sm:text-4xl">
+        Reseñas de huéspedes
+      </h2>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        {
+          reviews.map((r) => (
+            <blockquote class="rounded-[var(--radius-cabin)] bg-crema p-7 shadow-[0_18px_40px_-24px_rgba(43,42,37,0.25)]">
+              <p class="font-display text-lg italic leading-snug text-tinta/90">“{r.quote}”</p>
+              <footer class="mt-5 eyebrow !text-oliva">{r.name}</footer>
+            </blockquote>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section class="relative overflow-hidden">
+    <Image
+      src={IMG.fachada}
+      alt="Fachada de las cabañas estilo alemán en la Colonia Tovar"
+      width={1600}
+      height={1000}
+      class="absolute inset-0 -z-10 h-full w-full object-cover"
+    />
+    <div class="absolute inset-0 -z-10 bg-oliva-dark/85"></div>
+    <div class="mx-auto max-w-4xl px-5 py-24 text-center md:px-8 md:py-32">
+      <h2 class="font-display text-3xl font-semibold text-crema sm:text-4xl">
+        Sube a la montaña este fin de semana
+      </h2>
+      <p class="mx-auto mt-4 max-w-md font-body text-crema/80">
+        Cuatro cabañitas, un solo mensaje de WhatsApp. Te contamos disponibilidad al toque.
+      </p>
+      <a
+        href={waLink("Hola, quiero reservar en Cabañas Monte Tovar")}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-primary mt-8"
+      >
+        Reservar por WhatsApp
+      </a>
+    </div>
+  </section>
+</Layout>

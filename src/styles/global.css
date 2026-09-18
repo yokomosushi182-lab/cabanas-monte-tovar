@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+  --color-oliva: #5e6b3a;
+  --color-oliva-dark: #454f2a;
+  --color-oliva-light: #7c8a52;
+  --color-crema: #f3eee2;
+  --color-crema-soft: #eae2d0;
+  --color-terracota: #b5482b;
+  --color-terracota-dark: #963a21;
+  --color-madera: #b7834a;
+  --color-niebla: #7e93a0;
+  --color-tinta: #2b2a25;
+
+  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+  --font-body: "Karla", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --radius-cabin: 22px;
+  --radius-cabin-lg: 28px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-crema);
+    color: var(--color-tinta);
+    font-family: var(--font-body);
+    font-feature-settings: "kern";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-oliva-dark);
+    letter-spacing: -0.01em;
+    line-height: 1.08;
+  }
+
+  p {
+    line-height: 1.65;
+  }
+
+  a {
+    text-underline-offset: 0.2em;
+  }
+
+  ::selection {
+    background-color: var(--color-terracota);
+    color: var(--color-crema);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-terracota);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .eyebrow {
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    font-size: 0.72rem;
+    color: var(--color-terracota);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    border-radius: 999px;
+    padding: 0.85rem 1.7rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    min-height: 44px;
+  }
+
+  .btn:hover {
+    transform: translateY(-1px);
+  }
+
+  .btn-primary {
+    background-color: var(--color-terracota);
+    color: var(--color-crema);
+    box-shadow: 0 8px 20px -8px rgba(181, 72, 43, 0.55);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-terracota-dark);
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: var(--color-oliva-dark);
+    border: 1.5px solid var(--color-oliva);
+  }
+
+  .btn-outline:hover {
+    background-color: var(--color-oliva);
+    color: var(--color-crema);
+  }
+}

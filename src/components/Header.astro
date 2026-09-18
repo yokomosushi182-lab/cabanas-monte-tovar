@@ -1,0 +1,108 @@
+---
+import Logo from "./Logo.astro";
+import { NAV, SITE, waLink } from "../data/site";
+
+const path = Astro.url.pathname;
+const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWith(href));
+---
+
+<header class="sticky top-0 z-50 border-b border-oliva/10 bg-crema/90 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 md:px-8">
+    <Logo />
+
+    <nav class="hidden items-center gap-8 lg:flex" aria-label="Navegación principal">
+      {
+        NAV.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              "font-body text-sm font-bold uppercase tracking-[0.08em] transition-colors",
+              isActive(item.href) ? "text-terracota" : "text-tinta/80 hover:text-oliva",
+            ]}
+            aria-current={isActive(item.href) ? "page" : undefined}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <a
+      href={waLink("Hola, quiero reservar en Cabañas Monte Tovar")}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn btn-primary hidden lg:inline-flex"
+    >
+      Reservar por WhatsApp
+    </a>
+
+    <button
+      id="menu-toggle"
+      type="button"
+      class="grid h-11 w-11 place-items-center rounded-full border border-oliva/30 text-oliva-dark lg:hidden"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      aria-label="Abrir menú"
+    >
+      <svg id="icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <svg id="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="hidden">
+        <line x1="5" y1="5" x2="19" y2="19"></line>
+        <line x1="19" y1="5" x2="5" y2="19"></line>
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-nav" class="hidden border-t border-oliva/10 bg-crema lg:hidden" role="dialog" aria-label="Menú móvil">
+    <nav class="flex flex-col gap-1 px-5 py-4" aria-label="Navegación móvil">
+      {
+        NAV.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              "rounded-xl px-3 py-3 font-body text-base font-bold uppercase tracking-[0.06em]",
+              isActive(item.href) ? "bg-oliva/10 text-terracota" : "text-tinta/85",
+            ]}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+      <a
+        href={waLink("Hola, quiero reservar en Cabañas Monte Tovar")}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-primary mt-3 justify-center"
+      >
+        Reservar por WhatsApp
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const panel = document.getElementById("mobile-nav");
+  const iconOpen = document.getElementById("icon-open");
+  const iconClose = document.getElementById("icon-close");
+
+  toggle?.addEventListener("click", () => {
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!expanded));
+    panel?.classList.toggle("hidden");
+    iconOpen?.classList.toggle("hidden");
+    iconClose?.classList.toggle("hidden");
+  });
+
+  panel?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      toggle?.setAttribute("aria-expanded", "false");
+      panel.classList.add("hidden");
+      iconOpen?.classList.remove("hidden");
+      iconClose?.classList.add("hidden");
+    });
+  });
+</script>

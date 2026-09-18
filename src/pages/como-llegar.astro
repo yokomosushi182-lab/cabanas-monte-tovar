@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import { IMG } from "../data/images";
+
+const routes = [
+  { from: "Caracas", time: "1 h 30 min", detail: "Autopista Caracas–La Victoria, salida hacia El Junquito o La Victoria, luego la vía a la Colonia Tovar." },
+  { from: "Maracay", time: "1 h", detail: "Por la carretera vieja Maracay–Colonia Tovar, subiendo entre curvas y neblina." },
+  { from: "La Victoria", time: "40 min", detail: "La ruta más corta si vienes por el centro del estado Aragua." },
+];
+---
+
+<Layout
+  title="Cómo llegar — Cabañas Monte Tovar"
+  description="Cómo llegar a Cabañas Monte Tovar en la Colonia Tovar, Aragua: tiempos desde Caracas, Maracay y La Victoria, a 1 hora y media de Caracas."
+>
+  <section class="mx-auto max-w-6xl px-5 pb-6 pt-16 md:px-8 md:pt-24">
+    <p class="eyebrow">Ubicación</p>
+    <h1 class="mt-3 max-w-xl font-display text-4xl font-semibold sm:text-5xl">Cómo llegar</h1>
+    <p class="mt-4 max-w-lg font-body text-tinta/75">
+      Monte Tovar está en lo más alto de la Colonia Tovar, Aragua — a 1 hora y media de Caracas
+      y a 5 minutos del Hotel Freiburg.
+    </p>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-14">
+    <div class="grid gap-10 md:grid-cols-[1fr_1fr] md:gap-14">
+      <div class="space-y-6">
+        {
+          routes.map((r) => (
+            <div class="flex items-baseline justify-between gap-4 border-b border-oliva/15 pb-4">
+              <div>
+                <p class="font-display text-xl font-semibold text-oliva-dark">Desde {r.from}</p>
+                <p class="mt-1 max-w-sm text-sm text-tinta/70">{r.detail}</p>
+              </div>
+              <p class="eyebrow shrink-0 !text-terracota">{r.time}</p>
+            </div>
+          ))
+        }
+
+        <div class="rounded-[var(--radius-cabin)] bg-oliva/8 p-6">
+          <p class="font-display text-lg font-semibold text-oliva-dark">Un punto de referencia</p>
+          <p class="mt-2 text-sm text-tinta/75">
+            Si el GPS te pierde entre las curvas, guíate por el Hotel Freiburg: estamos a solo
+            5 minutos de ahí, subiendo hacia la parte más alta de la Colonia.
+          </p>
+        </div>
+      </div>
+
+      <div class="overflow-hidden rounded-[var(--radius-cabin-lg)] ring-1 ring-oliva/10">
+        <iframe
+          title="Mapa de la Colonia Tovar, Aragua"
+          src="https://www.google.com/maps?q=Colonia+Tovar,+Aragua,+Venezuela&output=embed"
+          class="h-[420px] w-full grayscale-[10%] md:h-full"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-5 md:px-8">
+    <div class="mx-auto max-w-6xl overflow-hidden rounded-[var(--radius-cabin-lg)]">
+      <Image
+        src={IMG.puerta}
+        alt="Camino de entrada hacia las cabañitas en la montaña"
+        width={1600}
+        height={800}
+        class="h-[40vh] w-full object-cover md:h-[50vh]"
+      />
+    </div>
+  </section>
+</Layout>

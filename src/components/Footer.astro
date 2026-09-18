@@ -1,0 +1,62 @@
+---
+import Logo from "./Logo.astro";
+import { NAV, SITE, waLink } from "../data/site";
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-oliva-dark text-crema">
+  <div class="mx-auto max-w-6xl px-5 py-14 md:px-8">
+    <div class="grid gap-10 md:grid-cols-[1.3fr_1fr_1fr]">
+      <div>
+        <Logo variant="crema" />
+        <p class="mt-4 max-w-xs font-body text-sm leading-relaxed text-crema/75">
+          Cuatro cabañitas en lo más alto de la Colonia Tovar, Aragua. Aire de montaña,
+          desayuno criollo y la niebla como vecina.
+        </p>
+        <a
+          href={waLink("Hola, quiero reservar en Cabañas Monte Tovar")}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary mt-6"
+        >
+          Reservar por WhatsApp
+        </a>
+      </div>
+
+      <div>
+        <p class="eyebrow !text-crema/60">Explorar</p>
+        <nav class="mt-4 flex flex-col gap-2" aria-label="Enlaces del pie de página">
+          {
+            NAV.filter((n) => n.href !== "/").map((item) => (
+              <a href={item.href} class="font-body text-sm text-crema/85 hover:text-crema">
+                {item.label}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+
+      <div>
+        <p class="eyebrow !text-crema/60">Contacto</p>
+        <ul class="mt-4 flex flex-col gap-2 font-body text-sm text-crema/85">
+          <li>
+            <a href={waLink("Hola, quiero más información sobre Monte Tovar")} target="_blank" rel="noopener noreferrer" class="hover:text-crema">
+              WhatsApp: +54 9 294 415-7182
+            </a>
+          </li>
+          <li>
+            <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" class="hover:text-crema">
+              Instagram: {SITE.instagramHandle}
+            </a>
+          </li>
+          <li class="text-crema/70">Colonia Tovar, Aragua, Venezuela</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col gap-2 border-t border-crema/15 pt-6 text-xs text-crema/55 md:flex-row md:items-center md:justify-between">
+      <p>© {year} Cabañas Monte Tovar. Todos los derechos reservados.</p>
+      <p>Hecho con cariño en la montaña.</p>
+    </div>
+  </div>
+</footer>
