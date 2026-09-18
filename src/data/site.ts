@@ -36,7 +36,7 @@ export const CABINS: Cabin[] = [
   {
     slug: "verde",
     name: "Cabaña Verde",
-    capacity: "Hasta 2 personas",
+    capacity: "2 personas, adaptable hasta 4",
     features: ["Baño privado", "Sábanas de algodón egipcio", "Toallas Kalosh"],
     image: "verde",
   },
