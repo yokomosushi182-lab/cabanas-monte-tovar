@@ -27,8 +27,6 @@ export const NAV = [
 export type Cabin = {
   slug: string;
   name: string;
-  summary: string;
-  beds: string;
   capacity: string;
   features: string[];
   image: string;
@@ -38,41 +36,29 @@ export const CABINS: Cabin[] = [
   {
     slug: "verde",
     name: "Cabaña Verde",
-    summary:
-      "La más íntima: perfecta para una pareja que quiere niebla, café de la mañana y silencio de montaña.",
-    beds: "1 cama matrimonial",
     capacity: "Hasta 2 personas",
-    features: ["Baño privado", "Cafetera y agua caliente"],
+    features: ["Baño privado"],
     image: "verde",
   },
   {
     slug: "amarilla",
     name: "Cabaña Amarilla",
-    summary:
-      "Con porche y comedor propio, cómoda para parejas o grupos de hasta seis.",
-    beds: "1 cama matrimonial",
-    capacity: "De 2 a 6 personas",
-    features: ["Baño privado", "Porche y comedor", "Cafetera y agua caliente"],
+    capacity: "De 4 a 6 personas",
+    features: ["Baño privado"],
     image: "amarilla",
   },
   {
     slug: "azul",
     name: "Cabaña Azul",
-    summary:
-      "Dos habitaciones conectadas, ideal para familias chicas o dos parejas de amigos.",
-    beds: "2 camas",
     capacity: "Hasta 4 personas",
-    features: ["Baño privado", "Ropa de cama incluida"],
+    features: ["Baño privado"],
     image: "azul",
   },
   {
     slug: "roja",
     name: "Cabaña Roja",
-    summary:
-      "Con literas para los más chicos y una cama grande para los papás. La preferida de los grupos con niños.",
-    beds: "1 cama matrimonial + literas para 4",
     capacity: "Hasta 6 personas",
-    features: ["Baño privado", "Literas de madera", "Pet friendly"],
+    features: ["Baño privado"],
     image: "roja",
   },
 ];
