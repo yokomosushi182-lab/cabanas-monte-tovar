@@ -30,15 +30,9 @@ import { EVENTS, waLink } from "../data/site";
       ) : (
         <div class="space-y-10">
           {EVENTS.map((event) => (
-            <article class="grid gap-8 overflow-hidden rounded-[var(--radius-cabin-lg)] bg-white/40 ring-1 ring-oliva/10 md:grid-cols-[1fr_1.1fr]">
-              <div class="aspect-[4/3] md:aspect-auto">
-                <Image
-                  src={IMG.fachada}
-                  alt={event.name}
-                  width={800}
-                  height={700}
-                  class="h-full w-full object-cover"
-                />
+            <article class="grid gap-8 overflow-hidden rounded-[var(--radius-cabin-lg)] bg-white/40 ring-1 ring-oliva/10 md:grid-cols-[1fr_1.1fr] md:items-center">
+              <div>
+                <Image src={IMG.fachada} alt={event.name} class="h-auto w-full" />
               </div>
               <div class="p-7 md:p-9">
                 {event.status === "próximo" && <p class="eyebrow">Próximamente</p>}
