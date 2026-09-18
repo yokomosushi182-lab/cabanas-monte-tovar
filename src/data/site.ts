@@ -48,7 +48,6 @@ export const CABINS: Cabin[] = [
       "Baño privado",
       "Chimenea",
       "Porche independiente con comedor",
-      "Área de parrillera y jardín",
       "Sábanas de algodón egipcio",
       "Toallas Kalosh",
     ],
